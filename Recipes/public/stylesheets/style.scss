@@ -1,0 +1,99 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif; 
+  font-size: 16px;
+  background: tomato;
+  color: #fff;
+}
+a {
+  color: yellow;
+}
+  
+ul{
+  list-style: none;
+}
+
+.header{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #2d2d2d;
+  color:yellow;
+  height: 60px;
+  margin-top: 0;
+
+  a{
+
+  }
+  ul{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  ul li{
+
+  }
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;  
+}
+.recipe-box{
+  background: #fafafa;
+  width: 25%;
+  margin: .5rem;
+  color: #2d2d2d;
+  padding: .5rem;
+
+  a{
+    color: turquoise;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+.body-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  select{
+    width: 100%;
+    padding: .5rem;
+    background: #fff;
+  }
+  input{
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem 0;
+  }
+}
+
+button{ 
+  background: #2d2d2d;
+  color: yellow;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  margin: 1rem 0;
+}

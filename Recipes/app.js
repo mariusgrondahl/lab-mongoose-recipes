@@ -8,6 +8,8 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+hbs.registerPartials(__dirname + '/views/partials');
+
 
 
 const app_name = require('./package.json').name;
@@ -34,10 +36,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 // default value for title local
-app.locals.title = 'Recipies App';
+app.locals.title = 'Recipes App';
 
 const index = require('./routes/index');
 app.use('/', index);
-
+app.use(function(req,res, next){
+  res.send("Megaerror")
+})
 
 module.exports = app;

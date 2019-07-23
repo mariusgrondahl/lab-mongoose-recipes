@@ -1,0 +1,21 @@
+<h1>All Recipes</h1>
+<div class="flex-container">
+  {{#each recipe}}
+  <div class="recipe-box">
+    <h3>{{this.title}}</h3>  
+      <img src="{{this.image}}" width="200" />
+    <p>{{this.cuisine}}</p>
+
+    <ul>
+      <li><a href="/edit/{{this.id}}">Edit</a></li>
+      <li><a href="/edit/delete/{{this.id}}" id="delete">Delete</a></li>
+
+
+    </ul>
+
+   
+
+  </div>
+  
+  {{/each}}
+</div>
