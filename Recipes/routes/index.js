@@ -2,12 +2,6 @@ const express = require('express');
 const router  = express.Router();
 const Recipe = require('../models/Recipe');
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/kitchen', { useNewUrlParser: true })
-mongoose.connection.on('connected', () => {  
-  console.log('Mongoose er åpen for idag');
-}); 
-
 
 
 /* Render all Recipes on homepage */
@@ -47,7 +41,7 @@ router.post("/new", (req,res)=> {
 
   Recipe.create(newRecipe)
       .then((recipe)=> {
-          res.redirect("index")
+          res.redirect("/")
       })
 })
 
@@ -99,8 +93,6 @@ router.get("/edit/delete/:id", function (req, res, next) {
     })
 
 });
-
-
 
 module.exports = router;
 
