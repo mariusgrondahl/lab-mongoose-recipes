@@ -1,13 +1,24 @@
+html{
+  background: #2d2d2d;
+}
+
+$primary: olive;
+$secondary: tomato;
 body {
   padding: 0;
   margin: 0;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif; 
   font-size: 16px;
-  background: tomato;
+  background: url(/images/back.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #fff;
+  min-height: 90vh;
 }
 a {
-  color: yellow;
+  color: white;
   text-decoration: none;
 }
   
@@ -20,7 +31,7 @@ ul{
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #2d2d2d;
+  background: $primary;
   height: 60px;
   margin-top: 0;
 
@@ -34,13 +45,8 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-     
- 
   }
 
-  ul li{
-
-  }
 }
 
 .flex-container{
@@ -58,11 +64,11 @@ ul{
   padding: .5rem;
 
   a{
-    color: red;
+    color: $secondary;
     font-weight: bold;
 
     &:hover{
-      color: darkred;
+      color: $secondary;
     }
   }
 
@@ -93,13 +99,15 @@ form{
   }
   input{
     width: 100%;
-    padding: .5rem;
+    padding: .8rem 1rem;
     margin: .5rem 0;
+    border: none;
+    border-radius: 3px;
   }
 }
 
 button{ 
-  background: #2d2d2d;
+  background: tomato;
   color: yellow;
   border-radius: 3px;
   padding: 10px 20px;

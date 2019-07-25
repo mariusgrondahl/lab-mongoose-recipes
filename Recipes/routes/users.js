@@ -1,6 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 const User = require('../models/User');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 
 //Signing up route
@@ -13,7 +15,9 @@ router.post("/signup", (req,res)=> {
   let newUser = {
       username: req.body.username,
       password: req.body.password,
+  
   };
+
 
   User.create(newUser)
     .then(()=> {
@@ -56,7 +60,7 @@ router.get("/profile", function(req, res, next) {
   if (req.session.user) {
       res.render("profile");
   } else {
-    res.send("error");
+    res.render("login");
   }
 });
 

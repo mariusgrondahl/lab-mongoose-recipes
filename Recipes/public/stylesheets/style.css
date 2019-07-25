@@ -1,13 +1,21 @@
+html {
+  background: #2d2d2d; }
+
 body {
   padding: 0;
   margin: 0;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background: tomato;
-  color: #fff; }
+  background: url(/images/back.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  min-height: 90vh; }
 
 a {
-  color: yellow;
+  color: white;
   text-decoration: none; }
 
 ul {
@@ -18,7 +26,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #2d2d2d;
+  background: olive;
   height: 60px;
   margin-top: 0; }
   .header a {
@@ -44,10 +52,10 @@ ul {
   color: #2d2d2d;
   padding: .5rem; }
   .recipe-box a {
-    color: red;
+    color: tomato;
     font-weight: bold; }
     .recipe-box a:hover {
-      color: darkred; }
+      color: tomato; }
   .recipe-box ul {
     padding: 0;
     margin: 0; }
@@ -70,11 +78,13 @@ form {
     background: #fff; }
   form input {
     width: 100%;
-    padding: .5rem;
-    margin: .5rem 0; }
+    padding: .8rem 1rem;
+    margin: .5rem 0;
+    border: none;
+    border-radius: 3px; }
 
 button {
-  background: #2d2d2d;
+  background: tomato;
   color: yellow;
   border-radius: 3px;
   padding: 10px 20px;
