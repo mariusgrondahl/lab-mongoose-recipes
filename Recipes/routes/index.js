@@ -43,6 +43,9 @@ router.post("/new", (req,res)=> {
       .then((recipe)=> {
           res.redirect("/")
       })
+      .catch((error)=> {
+        console.log("Fill out all the required fields");
+      })
 })
 
 // Edit Route
